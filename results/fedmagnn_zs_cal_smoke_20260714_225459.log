@@ -1,0 +1,17 @@
+[2026-07-14 22:54:59] INFO fedmagnn_zs_cal_smoke: Mode: fedavg | tag: zs_cal_smoke | device: cpu
+[2026-07-14 22:54:59] INFO fedmagnn_zs_cal_smoke: Federated config: {"rounds": 3, "local_epochs": 1, "share_mode": "encoder", "fedprox_mu": 0.0, "align": true, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-14 22:55:01] INFO fedmagnn_zs_cal_smoke:   silo ctu13: train_nodes=1068 val_nodes=1078 test_nodes=1063 malicious_ratio=0.000
+[2026-07-14 22:55:01] INFO fedmagnn_zs_cal_smoke:   silo cicids: train_nodes=316 val_nodes=329 test_nodes=310 malicious_ratio=0.016
+[2026-07-14 22:55:01] INFO fedmagnn_zs_cal_smoke:   silo dohbrw: train_nodes=2500 val_nodes=2500 test_nodes=2500 malicious_ratio=0.922
+[2026-07-14 22:55:10] INFO fedmagnn_zs_cal_smoke: Round 001/3 | mean val_f1=69.71% acc=57.75% | ctu13=71.9 cicids=59.5 dohbrw=77.7 | 9.1s
+[2026-07-14 22:55:19] INFO fedmagnn_zs_cal_smoke: Round 002/3 | mean val_f1=88.98% acc=84.82% | ctu13=82.3 cicids=96.1 dohbrw=88.5 | 7.9s
+[2026-07-14 22:55:26] INFO fedmagnn_zs_cal_smoke: Round 003/3 | mean val_f1=90.85% acc=88.42% | ctu13=85.3 cicids=97.2 dohbrw=90.0 | 7.0s
+[2026-07-14 22:55:27] INFO fedmagnn_zs_cal_smoke: 
+Best round: 3 (mean val F1 90.85%)
+[2026-07-14 22:55:27] INFO fedmagnn_zs_cal_smoke: TEST | mean f1=90.76% acc=88.35%
+[2026-07-14 22:55:27] INFO fedmagnn_zs_cal_smoke:   ctu13      acc=75.35 f1=84.73 prec=96.78 rec=75.35
+[2026-07-14 22:55:27] INFO fedmagnn_zs_cal_smoke:   cicids     acc=97.42 f1=97.89 prec=98.64 rec=97.42
+[2026-07-14 22:55:27] INFO fedmagnn_zs_cal_smoke:   dohbrw     acc=92.28 f1=89.67 prec=89.62 rec=92.28
+[2026-07-14 22:55:28] INFO fedmagnn_zs_cal_smoke: 
+ZERO-SHOT (ctu13, prototype-NN): {"naive": {"accuracy": 95.01411100658514, "f1": 96.06829554742039, "precision": 97.14613496087925, "recall": 95.01411100658514, "mse": 0.1970185424625986, "rmse": 0.4438677082899798, "mae": 0.442617095284942, "mape": 55.411313573519394}, "calibrated": {"accuracy": 93.97930385700846, "f1": 95.52891410489318, "precision": 97.13048367075432, "recall": 93.97930385700846, "mse": 0.09737270196623214, "rmse": 0.31204599335071126, "mae": 0.24263395582302102, "mape": 76.06013491749763}, "threshold": -0.09477929025888443}
+[2026-07-14 22:55:28] INFO fedmagnn_zs_cal_smoke: Results saved to results\fed_results_zs_cal_smoke.json

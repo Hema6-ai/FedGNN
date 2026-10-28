@@ -1,0 +1,34 @@
+[2026-07-21 17:03:04] INFO fedmagnn_fullshare_diagnostic: Mode: fedavg | tag: fullshare_diagnostic | device: cpu
+[2026-07-21 17:03:04] INFO fedmagnn_fullshare_diagnostic: Federated config: {"rounds": 20, "local_epochs": 2, "share_mode": "full", "fedprox_mu": 0.0, "align": false, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-21 17:03:06] INFO fedmagnn_fullshare_diagnostic:   silo ctu13: train_nodes=2172 val_nodes=2239 test_nodes=2208 malicious_ratio=0.018
+[2026-07-21 17:03:06] INFO fedmagnn_fullshare_diagnostic:   silo cicids: train_nodes=763 val_nodes=747 test_nodes=740 malicious_ratio=0.007
+[2026-07-21 17:03:06] INFO fedmagnn_fullshare_diagnostic:   silo dohbrw: train_nodes=6000 val_nodes=6000 test_nodes=6000 malicious_ratio=0.928
+[2026-07-21 17:03:06] INFO fedmagnn_fullshare_diagnostic:   silo iscxvpn: train_nodes=6000 val_nodes=6000 test_nodes=6000 malicious_ratio=0.725
+[2026-07-21 17:03:41] INFO fedmagnn_fullshare_diagnostic: Round 001/20 | mean val_f1=78.53% acc=74.59% | ctu13=71.8 cicids=97.5 dohbrw=85.4 iscxvpn=59.4 | 34.4s
+[2026-07-21 17:04:11] INFO fedmagnn_fullshare_diagnostic: Round 002/20 | mean val_f1=82.03% acc=78.94% | ctu13=81.5 cicids=97.9 dohbrw=89.1 iscxvpn=59.6 | 30.1s
+[2026-07-21 17:04:41] INFO fedmagnn_fullshare_diagnostic: Round 003/20 | mean val_f1=82.71% acc=80.01% | ctu13=81.6 cicids=98.0 dohbrw=91.6 iscxvpn=59.7 | 29.5s
+[2026-07-21 17:05:11] INFO fedmagnn_fullshare_diagnostic: Round 004/20 | mean val_f1=80.39% acc=77.72% | ctu13=80.7 cicids=84.9 dohbrw=93.4 iscxvpn=62.5 | 29.8s
+[2026-07-21 17:05:40] INFO fedmagnn_fullshare_diagnostic: Round 005/20 | mean val_f1=79.43% acc=76.15% | ctu13=80.6 cicids=80.2 dohbrw=94.1 iscxvpn=62.9 | 29.5s
+[2026-07-21 17:06:10] INFO fedmagnn_fullshare_diagnostic: Round 006/20 | mean val_f1=79.63% acc=76.06% | ctu13=81.0 cicids=79.8 dohbrw=94.2 iscxvpn=63.5 | 29.4s
+[2026-07-21 17:06:39] INFO fedmagnn_fullshare_diagnostic: Round 007/20 | mean val_f1=80.54% acc=76.95% | ctu13=81.5 cicids=81.7 dohbrw=94.3 iscxvpn=64.7 | 29.7s
+[2026-07-21 17:07:09] INFO fedmagnn_fullshare_diagnostic: Round 008/20 | mean val_f1=81.73% acc=78.44% | ctu13=81.7 cicids=85.7 dohbrw=94.1 iscxvpn=65.5 | 29.7s
+[2026-07-21 17:07:39] INFO fedmagnn_fullshare_diagnostic: Round 009/20 | mean val_f1=84.95% acc=83.85% | ctu13=81.9 cicids=97.7 dohbrw=94.2 iscxvpn=66.0 | 29.4s
+[2026-07-21 17:08:08] INFO fedmagnn_fullshare_diagnostic: Round 010/20 | mean val_f1=85.01% acc=83.77% | ctu13=81.7 cicids=97.5 dohbrw=94.4 iscxvpn=66.4 | 29.1s
+[2026-07-21 17:08:37] INFO fedmagnn_fullshare_diagnostic: Round 011/20 | mean val_f1=85.10% acc=83.87% | ctu13=81.7 cicids=97.5 dohbrw=94.4 iscxvpn=66.8 | 29.1s
+[2026-07-21 17:09:06] INFO fedmagnn_fullshare_diagnostic: Round 012/20 | mean val_f1=85.40% acc=83.73% | ctu13=81.9 cicids=97.4 dohbrw=94.3 iscxvpn=68.1 | 29.2s
+[2026-07-21 17:09:35] INFO fedmagnn_fullshare_diagnostic: Round 013/20 | mean val_f1=85.58% acc=83.66% | ctu13=81.9 cicids=97.2 dohbrw=94.4 iscxvpn=68.9 | 29.2s
+[2026-07-21 17:10:05] INFO fedmagnn_fullshare_diagnostic: Round 014/20 | mean val_f1=85.68% acc=83.71% | ctu13=82.0 cicids=97.2 dohbrw=94.5 iscxvpn=69.0 | 29.4s
+[2026-07-21 17:10:34] INFO fedmagnn_fullshare_diagnostic: Round 015/20 | mean val_f1=85.95% acc=83.95% | ctu13=82.8 cicids=97.4 dohbrw=94.2 iscxvpn=69.4 | 29.1s
+[2026-07-21 17:11:04] INFO fedmagnn_fullshare_diagnostic: Round 016/20 | mean val_f1=86.11% acc=84.12% | ctu13=83.3 cicids=97.4 dohbrw=94.3 iscxvpn=69.5 | 29.8s
+[2026-07-21 17:11:34] INFO fedmagnn_fullshare_diagnostic: Round 017/20 | mean val_f1=86.24% acc=84.18% | ctu13=83.0 cicids=97.3 dohbrw=94.7 iscxvpn=69.9 | 29.9s
+[2026-07-21 17:12:04] INFO fedmagnn_fullshare_diagnostic: Round 018/20 | mean val_f1=86.00% acc=83.89% | ctu13=82.3 cicids=96.6 dohbrw=95.0 iscxvpn=70.0 | 30.0s
+[2026-07-21 17:12:33] INFO fedmagnn_fullshare_diagnostic: Round 019/20 | mean val_f1=81.89% acc=77.27% | ctu13=82.1 cicids=80.2 dohbrw=95.2 iscxvpn=70.1 | 29.4s
+[2026-07-21 17:13:03] INFO fedmagnn_fullshare_diagnostic: Round 020/20 | mean val_f1=79.29% acc=73.75% | ctu13=81.0 cicids=70.1 dohbrw=95.5 iscxvpn=70.5 | 29.3s
+[2026-07-21 17:13:04] INFO fedmagnn_fullshare_diagnostic: 
+Best round: 17 (mean val F1 86.24%)
+[2026-07-21 17:13:04] INFO fedmagnn_fullshare_diagnostic: TEST | mean f1=86.14% acc=83.79%
+[2026-07-21 17:13:04] INFO fedmagnn_fullshare_diagnostic:   ctu13      acc=70.92 f1=81.75 prec=96.47 rec=70.92
+[2026-07-21 17:13:04] INFO fedmagnn_fullshare_diagnostic:   cicids     acc=95.68 f1=97.27 prec=99.42 rec=95.68
+[2026-07-21 17:13:04] INFO fedmagnn_fullshare_diagnostic:   dohbrw     acc=94.33 f1=94.25 prec=94.17 rec=94.33
+[2026-07-21 17:13:04] INFO fedmagnn_fullshare_diagnostic:   iscxvpn    acc=74.23 f1=71.29 prec=71.33 rec=74.23
+[2026-07-21 17:13:04] INFO fedmagnn_fullshare_diagnostic: Results saved to results\fed_results_fullshare_diagnostic.json

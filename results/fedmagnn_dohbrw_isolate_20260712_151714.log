@@ -1,0 +1,9 @@
+[2026-07-12 15:17:14] INFO fedmagnn_dohbrw_isolate: Mode: fedavg | tag: dohbrw_isolate | device: cpu
+[2026-07-12 15:17:14] INFO fedmagnn_dohbrw_isolate: Federated config: {"rounds": 1, "local_epochs": 1, "share_mode": "encoder", "fedprox_mu": 0.0, "align": false, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-12 15:17:28] INFO fedmagnn_dohbrw_isolate:   silo dohbrw: train_nodes=139999 val_nodes=20000 test_nodes=40001 malicious_ratio=0.926
+[2026-07-12 15:21:22] INFO fedmagnn_dohbrw_isolate: Round 001/1 | mean val_f1=78.79% acc=73.63% | dohbrw=78.8 | 234.1s
+[2026-07-12 15:21:24] INFO fedmagnn_dohbrw_isolate: 
+Best round: 1 (mean val F1 78.79%)
+[2026-07-12 15:21:24] INFO fedmagnn_dohbrw_isolate: TEST | mean f1=78.73% acc=73.61%
+[2026-07-12 15:21:24] INFO fedmagnn_dohbrw_isolate:   dohbrw     acc=73.61 f1=78.73 prec=84.83 rec=73.61
+[2026-07-12 15:21:24] INFO fedmagnn_dohbrw_isolate: Results saved to results\fed_results_dohbrw_isolate.json

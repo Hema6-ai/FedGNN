@@ -1,0 +1,36 @@
+{
+  "test_metrics": {
+    "ctu13": {
+      "accuracy": 75.33557046979867,
+      "f1": 84.9128417638845,
+      "precision": 97.52771053783304,
+      "recall": 75.33557046979867,
+      "mse": 0.2189567689065707,
+      "rmse": 0.4679281663958376,
+      "mae": 0.46330471741873147,
+      "mape": 53.3859099660601
+    }
+  },
+  "mean_test_f1": 84.9128417638845,
+  "mean_test_acc": 75.33557046979867,
+  "best_val_f1": {
+    "ctu13": 86.05541720441836
+  },
+  "history": [],
+  "wall_time_sec": 2.5574071407318115,
+  "mode": "local",
+  "federated_config": {
+    "rounds": 2,
+    "local_epochs": 1,
+    "share_mode": "encoder",
+    "fedprox_mu": 0.0,
+    "align": false,
+    "align_weight": 0.5,
+    "align_temperature": 0.1,
+    "proto_clip": 1.0,
+    "dp_sigma": 0.0,
+    "dp_clip": 1.0,
+    "dp_delta": 1e-05
+  },
+  "seed": 42
+}

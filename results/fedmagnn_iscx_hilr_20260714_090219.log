@@ -1,0 +1,16 @@
+[2026-07-14 09:02:19] INFO fedmagnn_iscx_hilr: Mode: local | tag: iscx_hilr | device: cpu
+[2026-07-14 09:02:19] INFO fedmagnn_iscx_hilr: Federated config: {"align": false, "align_temperature": 0.1, "align_weight": 0.5, "dp_clip": 1.0, "dp_delta": 1e-05, "dp_sigma": 0.0, "fedprox_mu": 0.0, "local_epochs": 1, "proto_clip": 1.0, "rounds": 100, "share_mode": "encoder"}
+[2026-07-14 09:02:20] INFO fedmagnn_iscx_hilr:   silo iscxvpn: train_nodes=8000 val_nodes=7653 test_nodes=8000 malicious_ratio=0.728
+[2026-07-14 09:03:44] INFO fedmagnn_iscx_hilr:   iscxvpn epoch 10/100 loss=12.5958 val_f1=61.54%
+[2026-07-14 09:05:06] INFO fedmagnn_iscx_hilr:   iscxvpn epoch 20/100 loss=11.0970 val_f1=70.96%
+[2026-07-14 09:06:26] INFO fedmagnn_iscx_hilr:   iscxvpn epoch 30/100 loss=10.2501 val_f1=76.25%
+[2026-07-14 09:07:45] INFO fedmagnn_iscx_hilr:   iscxvpn epoch 40/100 loss=9.3665 val_f1=76.49%
+[2026-07-14 09:09:03] INFO fedmagnn_iscx_hilr:   iscxvpn epoch 50/100 loss=8.8097 val_f1=77.80%
+[2026-07-14 09:10:20] INFO fedmagnn_iscx_hilr:   iscxvpn epoch 60/100 loss=8.6066 val_f1=77.76%
+[2026-07-14 09:11:38] INFO fedmagnn_iscx_hilr:   iscxvpn epoch 70/100 loss=8.1567 val_f1=78.56%
+[2026-07-14 09:12:56] INFO fedmagnn_iscx_hilr:   iscxvpn epoch 80/100 loss=7.8358 val_f1=78.33%
+[2026-07-14 09:14:13] INFO fedmagnn_iscx_hilr:   iscxvpn epoch 90/100 loss=7.4928 val_f1=79.38%
+[2026-07-14 09:15:31] INFO fedmagnn_iscx_hilr:   iscxvpn epoch 100/100 loss=7.3257 val_f1=79.42%
+[2026-07-14 09:15:31] INFO fedmagnn_iscx_hilr: iscxvpn: TEST acc=79.76 f1=79.56
+[2026-07-14 09:15:31] INFO fedmagnn_iscx_hilr: LOCAL BASELINE | mean test f1=79.56% acc=79.76%
+[2026-07-14 09:15:31] INFO fedmagnn_iscx_hilr: Results saved to results\fed_results_iscx_hilr.json

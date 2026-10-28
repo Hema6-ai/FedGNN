@@ -1,0 +1,15 @@
+[2026-07-12 15:06:39] INFO fedmagnn_flowmode_check: Mode: fedavg | tag: flowmode_check | device: cpu
+[2026-07-12 15:06:39] INFO fedmagnn_flowmode_check: Federated config: {"rounds": 5, "local_epochs": 1, "share_mode": "encoder", "fedprox_mu": 0.0, "align": true, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-12 15:06:40] INFO fedmagnn_flowmode_check:   silo iscxvpn: train_nodes=4000 val_nodes=4000 test_nodes=4000 malicious_ratio=0.513
+[2026-07-12 15:06:40] INFO fedmagnn_flowmode_check:   silo dohbrw: train_nodes=4000 val_nodes=4000 test_nodes=4000 malicious_ratio=0.927
+[2026-07-12 15:06:48] INFO fedmagnn_flowmode_check: Round 001/5 | mean val_f1=63.69% acc=70.59% | iscxvpn=38.4 dohbrw=88.9 | 7.9s
+[2026-07-12 15:06:56] INFO fedmagnn_flowmode_check: Round 002/5 | mean val_f1=62.01% acc=67.70% | iscxvpn=38.4 dohbrw=85.6 | 7.8s
+[2026-07-12 15:07:03] INFO fedmagnn_flowmode_check: Round 003/5 | mean val_f1=58.62% acc=62.35% | iscxvpn=38.1 dohbrw=79.1 | 7.7s
+[2026-07-12 15:07:11] INFO fedmagnn_flowmode_check: Round 004/5 | mean val_f1=55.62% acc=58.33% | iscxvpn=37.3 dohbrw=73.9 | 7.5s
+[2026-07-12 15:07:18] INFO fedmagnn_flowmode_check: Round 005/5 | mean val_f1=54.63% acc=57.84% | iscxvpn=36.4 dohbrw=72.8 | 7.6s
+[2026-07-12 15:07:19] INFO fedmagnn_flowmode_check: 
+Best round: 1 (mean val F1 63.69%)
+[2026-07-12 15:07:19] INFO fedmagnn_flowmode_check: TEST | mean f1=63.32% acc=70.22%
+[2026-07-12 15:07:19] INFO fedmagnn_flowmode_check:   iscxvpn    acc=50.60 f1=37.94 prec=46.95 rec=50.60
+[2026-07-12 15:07:19] INFO fedmagnn_flowmode_check:   dohbrw     acc=89.85 f1=88.69 prec=87.77 rec=89.85
+[2026-07-12 15:07:19] INFO fedmagnn_flowmode_check: Results saved to results\fed_results_flowmode_check.json

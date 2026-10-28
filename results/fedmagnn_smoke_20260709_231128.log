@@ -1,0 +1,12 @@
+[2026-07-09 23:11:28] INFO fedmagnn_smoke: Mode: fedavg | tag: smoke | device: cpu
+[2026-07-09 23:11:28] INFO fedmagnn_smoke: Federated config: {"rounds": 2, "local_epochs": 1, "share_mode": "encoder", "fedprox_mu": 0.0, "align": true, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-09 23:11:38] INFO fedmagnn_smoke:   silo ctu13: train_nodes=700 val_nodes=735 test_nodes=710 malicious_ratio=0.014
+[2026-07-09 23:11:38] INFO fedmagnn_smoke:   silo iscxvpn: train_nodes=1502 val_nodes=1502 test_nodes=1502 malicious_ratio=0.856
+[2026-07-09 23:11:46] INFO fedmagnn_smoke: Round 001/2 | mean val_f1=78.43% acc=75.57% | ctu13=82.7 iscxvpn=74.2 | 8.3s
+[2026-07-09 23:11:54] INFO fedmagnn_smoke: Round 002/2 | mean val_f1=80.90% acc=79.85% | ctu13=87.6 iscxvpn=74.2 | 8.2s
+[2026-07-09 23:11:55] INFO fedmagnn_smoke: 
+Best round: 2 (mean val F1 80.90%)
+[2026-07-09 23:11:55] INFO fedmagnn_smoke: TEST | mean f1=82.82% acc=80.60%
+[2026-07-09 23:11:55] INFO fedmagnn_smoke:   ctu13      acc=78.45 f1=87.06 prec=97.79 rec=78.45
+[2026-07-09 23:11:55] INFO fedmagnn_smoke:   iscxvpn    acc=82.76 f1=78.58 prec=74.98 rec=82.76
+[2026-07-09 23:11:55] INFO fedmagnn_smoke: Results saved to results\fed_results_smoke.json

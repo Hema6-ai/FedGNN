@@ -1,0 +1,7 @@
+[2026-07-09 23:14:35] INFO fedmagnn_smoke_local: Mode: local | tag: smoke_local | device: cpu
+[2026-07-09 23:14:35] INFO fedmagnn_smoke_local: Federated config: {"rounds": 2, "local_epochs": 1, "share_mode": "encoder", "fedprox_mu": 0.0, "align": false, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-09 23:14:38] INFO fedmagnn_smoke_local:   silo ctu13: train_nodes=580 val_nodes=609 test_nodes=596 malicious_ratio=0.016
+[2026-07-09 23:14:40] INFO fedmagnn_smoke_local:   ctu13 epoch 2/2 loss=8.9803 val_f1=86.06%
+[2026-07-09 23:14:40] INFO fedmagnn_smoke_local: ctu13: TEST acc=75.34 f1=84.91
+[2026-07-09 23:14:40] INFO fedmagnn_smoke_local: LOCAL BASELINE | mean test f1=84.91% acc=75.34%
+[2026-07-09 23:14:40] INFO fedmagnn_smoke_local: Results saved to results\fed_results_smoke_local.json

@@ -1,0 +1,2 @@
+[2026-07-12 15:11:49] INFO fedmagnn_fullscale_v6: Mode: fedprox | tag: fullscale_v6 | device: cpu
+[2026-07-12 15:11:49] INFO fedmagnn_fullscale_v6: Federated config: {"rounds": 1, "local_epochs": 1, "share_mode": "encoder", "fedprox_mu": 0.01, "align": true, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}

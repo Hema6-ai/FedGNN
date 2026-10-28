@@ -1,0 +1,15 @@
+{
+  "id": "jyothilakshmigummapu/fedmagnn-federated-training",
+  "title": "FedMAGNN Federated Training",
+  "code_file": "fedmagnn_train.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "jyothilakshmigummapu/fedmagnn-code"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

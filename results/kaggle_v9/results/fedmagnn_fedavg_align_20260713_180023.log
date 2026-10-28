@@ -1,0 +1,64 @@
+[2026-07-13 18:00:23] INFO fedmagnn_fedavg_align: Mode: fedavg | tag: fedavg_align | device: cuda
+[2026-07-13 18:00:23] INFO fedmagnn_fedavg_align: Federated config: {"rounds": 50, "local_epochs": 2, "share_mode": "encoder", "fedprox_mu": 0.0, "align": true, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-13 18:00:31] INFO fedmagnn_fedavg_align:   silo ctu13: train_nodes=31584 val_nodes=5983 test_nodes=10763 malicious_ratio=0.024
+[2026-07-13 18:00:31] INFO fedmagnn_fedavg_align:   silo cicids: train_nodes=10076 val_nodes=1809 test_nodes=3349 malicious_ratio=0.001
+[2026-07-13 18:00:31] INFO fedmagnn_fedavg_align:   silo dohbrw: train_nodes=60000 val_nodes=20000 test_nodes=40001 malicious_ratio=0.926
+[2026-07-13 18:00:31] INFO fedmagnn_fedavg_align:   silo iscxvpn: train_nodes=53572 val_nodes=7653 test_nodes=15307 malicious_ratio=0.733
+[2026-07-13 18:01:08] INFO fedmagnn_fedavg_align: Round 001/50 | mean val_f1=82.27% acc=80.42% | ctu13=80.9 cicids=98.9 dohbrw=87.9 iscxvpn=61.3 | 36.8s
+[2026-07-13 18:01:44] INFO fedmagnn_fedavg_align: Round 002/50 | mean val_f1=87.22% acc=90.55% | ctu13=96.8 cicids=99.1 dohbrw=90.5 iscxvpn=62.5 | 35.8s
+[2026-07-13 18:02:20] INFO fedmagnn_fedavg_align: Round 003/50 | mean val_f1=87.49% acc=90.90% | ctu13=97.2 cicids=99.3 dohbrw=91.1 iscxvpn=62.4 | 36.0s
+[2026-07-13 18:02:56] INFO fedmagnn_fedavg_align: Round 004/50 | mean val_f1=88.61% acc=91.12% | ctu13=97.2 cicids=99.4 dohbrw=93.0 iscxvpn=64.9 | 36.4s
+[2026-07-13 18:03:32] INFO fedmagnn_fedavg_align: Round 005/50 | mean val_f1=89.09% acc=91.21% | ctu13=97.2 cicids=99.4 dohbrw=94.7 iscxvpn=65.1 | 35.9s
+[2026-07-13 18:04:08] INFO fedmagnn_fedavg_align: Round 006/50 | mean val_f1=89.15% acc=91.19% | ctu13=97.2 cicids=99.5 dohbrw=94.9 iscxvpn=65.0 | 36.1s
+[2026-07-13 18:04:44] INFO fedmagnn_fedavg_align: Round 007/50 | mean val_f1=89.02% acc=91.44% | ctu13=97.2 cicids=99.5 dohbrw=94.2 iscxvpn=65.1 | 36.1s
+[2026-07-13 18:05:21] INFO fedmagnn_fedavg_align: Round 008/50 | mean val_f1=88.53% acc=91.20% | ctu13=97.2 cicids=99.6 dohbrw=93.2 iscxvpn=64.2 | 36.3s
+[2026-07-13 18:05:56] INFO fedmagnn_fedavg_align: Round 009/50 | mean val_f1=89.16% acc=91.55% | ctu13=98.3 cicids=99.6 dohbrw=94.2 iscxvpn=64.6 | 35.6s
+[2026-07-13 18:06:32] INFO fedmagnn_fedavg_align: Round 010/50 | mean val_f1=89.85% acc=91.81% | ctu13=98.0 cicids=99.6 dohbrw=95.1 iscxvpn=66.7 | 35.9s
+[2026-07-13 18:07:08] INFO fedmagnn_fedavg_align: Round 011/50 | mean val_f1=90.73% acc=92.25% | ctu13=98.1 cicids=99.6 dohbrw=96.0 iscxvpn=69.2 | 35.8s
+[2026-07-13 18:07:44] INFO fedmagnn_fedavg_align: Round 012/50 | mean val_f1=91.02% acc=92.16% | ctu13=98.5 cicids=99.7 dohbrw=96.2 iscxvpn=69.7 | 35.7s
+[2026-07-13 18:08:19] INFO fedmagnn_fedavg_align: Round 013/50 | mean val_f1=91.56% acc=92.70% | ctu13=99.1 cicids=99.6 dohbrw=96.5 iscxvpn=71.1 | 35.7s
+[2026-07-13 18:08:55] INFO fedmagnn_fedavg_align: Round 014/50 | mean val_f1=91.79% acc=92.88% | ctu13=99.4 cicids=99.6 dohbrw=96.4 iscxvpn=71.8 | 35.7s
+[2026-07-13 18:09:31] INFO fedmagnn_fedavg_align: Round 015/50 | mean val_f1=91.38% acc=92.60% | ctu13=97.1 cicids=99.5 dohbrw=96.8 iscxvpn=72.1 | 35.9s
+[2026-07-13 18:10:07] INFO fedmagnn_fedavg_align: Round 016/50 | mean val_f1=91.44% acc=92.60% | ctu13=97.2 cicids=99.5 dohbrw=96.6 iscxvpn=72.5 | 35.8s
+[2026-07-13 18:10:42] INFO fedmagnn_fedavg_align: Round 017/50 | mean val_f1=91.85% acc=92.76% | ctu13=97.2 cicids=99.4 dohbrw=96.7 iscxvpn=74.0 | 35.2s
+[2026-07-13 18:11:18] INFO fedmagnn_fedavg_align: Round 018/50 | mean val_f1=91.91% acc=92.61% | ctu13=97.2 cicids=99.5 dohbrw=97.0 iscxvpn=73.9 | 36.2s
+[2026-07-13 18:11:54] INFO fedmagnn_fedavg_align: Round 019/50 | mean val_f1=92.27% acc=93.08% | ctu13=97.2 cicids=99.5 dohbrw=97.1 iscxvpn=75.3 | 35.7s
+[2026-07-13 18:12:29] INFO fedmagnn_fedavg_align: Round 020/50 | mean val_f1=92.84% acc=93.35% | ctu13=99.4 cicids=99.5 dohbrw=97.3 iscxvpn=75.1 | 35.5s
+[2026-07-13 18:13:05] INFO fedmagnn_fedavg_align: Round 021/50 | mean val_f1=93.13% acc=93.58% | ctu13=99.3 cicids=99.6 dohbrw=97.3 iscxvpn=76.3 | 35.9s
+[2026-07-13 18:13:41] INFO fedmagnn_fedavg_align: Round 022/50 | mean val_f1=93.12% acc=93.61% | ctu13=99.2 cicids=99.7 dohbrw=97.3 iscxvpn=76.3 | 35.7s
+[2026-07-13 18:14:17] INFO fedmagnn_fedavg_align: Round 023/50 | mean val_f1=93.08% acc=93.48% | ctu13=99.2 cicids=99.6 dohbrw=97.3 iscxvpn=76.2 | 35.8s
+[2026-07-13 18:14:53] INFO fedmagnn_fedavg_align: Round 024/50 | mean val_f1=92.96% acc=93.53% | ctu13=98.8 cicids=99.7 dohbrw=97.8 iscxvpn=75.5 | 35.8s
+[2026-07-13 18:15:29] INFO fedmagnn_fedavg_align: Round 025/50 | mean val_f1=93.11% acc=93.67% | ctu13=98.8 cicids=99.8 dohbrw=98.0 iscxvpn=75.9 | 36.1s
+[2026-07-13 18:16:05] INFO fedmagnn_fedavg_align: Round 026/50 | mean val_f1=93.00% acc=93.56% | ctu13=98.9 cicids=99.7 dohbrw=97.7 iscxvpn=75.6 | 36.5s
+[2026-07-13 18:16:41] INFO fedmagnn_fedavg_align: Round 027/50 | mean val_f1=93.23% acc=93.69% | ctu13=99.2 cicids=99.7 dohbrw=97.9 iscxvpn=76.2 | 36.1s
+[2026-07-13 18:17:17] INFO fedmagnn_fedavg_align: Round 028/50 | mean val_f1=93.34% acc=93.77% | ctu13=99.2 cicids=99.6 dohbrw=98.3 iscxvpn=76.3 | 35.9s
+[2026-07-13 18:17:53] INFO fedmagnn_fedavg_align: Round 029/50 | mean val_f1=93.42% acc=93.80% | ctu13=99.3 cicids=99.6 dohbrw=98.2 iscxvpn=76.6 | 35.8s
+[2026-07-13 18:18:29] INFO fedmagnn_fedavg_align: Round 030/50 | mean val_f1=93.37% acc=93.80% | ctu13=99.3 cicids=99.6 dohbrw=98.2 iscxvpn=76.4 | 35.5s
+[2026-07-13 18:19:04] INFO fedmagnn_fedavg_align: Round 031/50 | mean val_f1=93.56% acc=93.87% | ctu13=99.3 cicids=99.7 dohbrw=98.5 iscxvpn=76.8 | 35.4s
+[2026-07-13 18:19:39] INFO fedmagnn_fedavg_align: Round 032/50 | mean val_f1=93.52% acc=93.96% | ctu13=99.3 cicids=99.7 dohbrw=98.5 iscxvpn=76.6 | 35.1s
+[2026-07-13 18:20:16] INFO fedmagnn_fedavg_align: Round 033/50 | mean val_f1=93.51% acc=93.84% | ctu13=99.3 cicids=99.6 dohbrw=98.4 iscxvpn=76.7 | 36.2s
+[2026-07-13 18:20:52] INFO fedmagnn_fedavg_align: Round 034/50 | mean val_f1=93.59% acc=93.97% | ctu13=99.3 cicids=99.6 dohbrw=98.6 iscxvpn=76.9 | 36.3s
+[2026-07-13 18:21:28] INFO fedmagnn_fedavg_align: Round 035/50 | mean val_f1=93.64% acc=94.02% | ctu13=99.4 cicids=99.6 dohbrw=98.6 iscxvpn=77.0 | 35.6s
+[2026-07-13 18:22:03] INFO fedmagnn_fedavg_align: Round 036/50 | mean val_f1=93.70% acc=94.02% | ctu13=99.4 cicids=99.6 dohbrw=98.4 iscxvpn=77.4 | 35.5s
+[2026-07-13 18:22:40] INFO fedmagnn_fedavg_align: Round 037/50 | mean val_f1=93.77% acc=94.07% | ctu13=99.3 cicids=99.7 dohbrw=98.6 iscxvpn=77.5 | 37.3s
+[2026-07-13 18:23:18] INFO fedmagnn_fedavg_align: Round 038/50 | mean val_f1=93.25% acc=93.82% | ctu13=97.2 cicids=99.6 dohbrw=98.7 iscxvpn=77.4 | 37.4s
+[2026-07-13 18:23:55] INFO fedmagnn_fedavg_align: Round 039/50 | mean val_f1=93.17% acc=93.74% | ctu13=97.2 cicids=99.6 dohbrw=98.6 iscxvpn=77.4 | 36.8s
+[2026-07-13 18:24:32] INFO fedmagnn_fedavg_align: Round 040/50 | mean val_f1=93.76% acc=94.12% | ctu13=99.6 cicids=99.6 dohbrw=98.6 iscxvpn=77.2 | 37.2s
+[2026-07-13 18:25:08] INFO fedmagnn_fedavg_align: Round 041/50 | mean val_f1=93.81% acc=94.14% | ctu13=99.3 cicids=99.7 dohbrw=98.8 iscxvpn=77.4 | 36.2s
+[2026-07-13 18:25:45] INFO fedmagnn_fedavg_align: Round 042/50 | mean val_f1=93.85% acc=94.16% | ctu13=99.3 cicids=99.6 dohbrw=98.8 iscxvpn=77.6 | 36.4s
+[2026-07-13 18:26:21] INFO fedmagnn_fedavg_align: Round 043/50 | mean val_f1=93.90% acc=94.20% | ctu13=99.4 cicids=99.7 dohbrw=98.8 iscxvpn=77.8 | 36.3s
+[2026-07-13 18:26:57] INFO fedmagnn_fedavg_align: Round 044/50 | mean val_f1=94.03% acc=94.32% | ctu13=99.6 cicids=99.7 dohbrw=98.9 iscxvpn=77.9 | 35.8s
+[2026-07-13 18:27:34] INFO fedmagnn_fedavg_align: Round 045/50 | mean val_f1=93.97% acc=94.33% | ctu13=99.6 cicids=99.7 dohbrw=98.9 iscxvpn=77.7 | 36.9s
+[2026-07-13 18:28:10] INFO fedmagnn_fedavg_align: Round 046/50 | mean val_f1=94.04% acc=94.29% | ctu13=99.6 cicids=99.7 dohbrw=98.9 iscxvpn=77.9 | 36.2s
+[2026-07-13 18:28:46] INFO fedmagnn_fedavg_align: Round 047/50 | mean val_f1=93.96% acc=94.29% | ctu13=99.5 cicids=99.7 dohbrw=98.9 iscxvpn=77.7 | 36.6s
+[2026-07-13 18:29:22] INFO fedmagnn_fedavg_align: Round 048/50 | mean val_f1=94.00% acc=94.30% | ctu13=99.4 cicids=99.8 dohbrw=98.9 iscxvpn=77.9 | 35.5s
+[2026-07-13 18:29:58] INFO fedmagnn_fedavg_align: Round 049/50 | mean val_f1=94.00% acc=94.27% | ctu13=99.4 cicids=99.8 dohbrw=99.0 iscxvpn=77.8 | 35.9s
+[2026-07-13 18:30:33] INFO fedmagnn_fedavg_align: Round 050/50 | mean val_f1=94.03% acc=94.34% | ctu13=99.4 cicids=99.8 dohbrw=99.0 iscxvpn=77.9 | 35.6s
+[2026-07-13 18:30:34] INFO fedmagnn_fedavg_align: 
+Best round: 46 (mean val F1 94.04%)
+[2026-07-13 18:30:34] INFO fedmagnn_fedavg_align: TEST | mean f1=93.39% acc=93.85%
+[2026-07-13 18:30:34] INFO fedmagnn_fedavg_align:   ctu13      acc=97.76 f1=96.83 prec=95.91 rec=97.76
+[2026-07-13 18:30:34] INFO fedmagnn_fedavg_align:   cicids     acc=99.73 f1=99.77 prec=99.82 rec=99.73
+[2026-07-13 18:30:34] INFO fedmagnn_fedavg_align:   dohbrw     acc=98.93 f1=98.91 prec=98.92 rec=98.93
+[2026-07-13 18:30:34] INFO fedmagnn_fedavg_align:   iscxvpn    acc=78.96 f1=78.07 prec=77.82 rec=78.96
+[2026-07-13 18:30:34] INFO fedmagnn_fedavg_align: Results saved to /kaggle/working/results/fed_results_fedavg_align.json

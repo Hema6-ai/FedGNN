@@ -1,0 +1,14 @@
+[2026-07-13 22:20:42] INFO fedmagnn_residual_probe: Mode: local | tag: residual_probe | device: cpu
+[2026-07-13 22:20:42] INFO fedmagnn_residual_probe: Federated config: {"rounds": 30, "local_epochs": 1, "share_mode": "encoder", "fedprox_mu": 0.0, "align": false, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-13 22:20:47] INFO fedmagnn_residual_probe:   silo iscxvpn: train_nodes=8000 val_nodes=7653 test_nodes=8000 malicious_ratio=0.728
+[2026-07-13 22:20:47] INFO fedmagnn_residual_probe:   silo dohbrw: train_nodes=8000 val_nodes=8000 test_nodes=8000 malicious_ratio=0.930
+[2026-07-13 22:23:34] INFO fedmagnn_residual_probe:   iscxvpn epoch 10/30 loss=12.5842 val_f1=69.65%
+[2026-07-13 22:26:20] INFO fedmagnn_residual_probe:   iscxvpn epoch 20/30 loss=10.9312 val_f1=73.97%
+[2026-07-13 22:29:02] INFO fedmagnn_residual_probe:   iscxvpn epoch 30/30 loss=10.1043 val_f1=75.33%
+[2026-07-13 22:29:03] INFO fedmagnn_residual_probe: iscxvpn: TEST acc=78.01 f1=77.55
+[2026-07-13 22:31:49] INFO fedmagnn_residual_probe:   dohbrw epoch 10/30 loss=10.1200 val_f1=89.38%
+[2026-07-13 22:34:37] INFO fedmagnn_residual_probe:   dohbrw epoch 20/30 loss=8.8445 val_f1=91.33%
+[2026-07-13 22:37:45] INFO fedmagnn_residual_probe:   dohbrw epoch 30/30 loss=8.2887 val_f1=91.93%
+[2026-07-13 22:37:49] INFO fedmagnn_residual_probe: dohbrw: TEST acc=94.60 f1=93.77
+[2026-07-13 22:37:49] INFO fedmagnn_residual_probe: LOCAL BASELINE | mean test f1=85.66% acc=86.31%
+[2026-07-13 22:37:49] INFO fedmagnn_residual_probe: Results saved to results\fed_results_residual_probe.json

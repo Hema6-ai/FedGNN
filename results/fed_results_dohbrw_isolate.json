@@ -1,0 +1,65 @@
+{
+  "test_metrics": {
+    "dohbrw": {
+      "accuracy": 73.61065973350667,
+      "f1": 78.72987426752928,
+      "precision": 84.8267322233166,
+      "recall": 73.61065973350667,
+      "mse": 0.21968303330929698,
+      "rmse": 0.46870356656344847,
+      "mae": 0.46431340786764697,
+      "mape": 45.486878116495525
+    }
+  },
+  "mean_test_f1": 78.72987426752928,
+  "mean_test_acc": 73.61065973350667,
+  "best_round": 1,
+  "best_mean_val_f1": 78.78842760931019,
+  "final_epsilon": null,
+  "history": [
+    {
+      "round": 1,
+      "losses": {
+        "dohbrw": {
+          "total": 14.398531913757324,
+          "cls": 0.1823497861623764,
+          "reg": 0.2697015404701233,
+          "contrastive": 27.353557586669922,
+          "align": 0.0,
+          "prox": 0.0
+        }
+      },
+      "val": {
+        "dohbrw": {
+          "accuracy": 73.63499999999999,
+          "f1": 78.78842760931019,
+          "precision": 84.9876118569184,
+          "recall": 73.63499999999999,
+          "mse": 0.2195331924840038,
+          "rmse": 0.46854369324963047,
+          "mae": 0.46418002459853885,
+          "mape": 45.48366116507117
+        }
+      },
+      "mean_val_f1": 78.78842760931019,
+      "mean_val_acc": 73.63499999999999,
+      "epsilon": null
+    }
+  ],
+  "wall_time_sec": 236.56208896636963,
+  "mode": "fedavg",
+  "federated_config": {
+    "rounds": 1,
+    "local_epochs": 1,
+    "share_mode": "encoder",
+    "fedprox_mu": 0.0,
+    "align": false,
+    "align_weight": 0.5,
+    "align_temperature": 0.1,
+    "proto_clip": 1.0,
+    "dp_sigma": 0.0,
+    "dp_clip": 1.0,
+    "dp_delta": 1e-05
+  },
+  "seed": 42
+}

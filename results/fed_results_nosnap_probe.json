@@ -1,0 +1,47 @@
+{
+  "test_metrics": {
+    "iscxvpn": {
+      "accuracy": 78.325,
+      "f1": 78.05509978749153,
+      "precision": 77.85292304391886,
+      "recall": 78.325,
+      "mse": 0.17607084817562907,
+      "rmse": 0.4196079696283533,
+      "mae": 0.3876756256345252,
+      "mape": 33.97977787769105
+    },
+    "dohbrw": {
+      "accuracy": 97.8875,
+      "f1": 97.8063162663295,
+      "precision": 97.82172914533339,
+      "recall": 97.8875,
+      "mse": 0.04593913608396869,
+      "rmse": 0.21433416919373516,
+      "mae": 0.1723964013159303,
+      "mape": 15.626714985302762
+    }
+  },
+  "mean_test_f1": 87.93070802691051,
+  "mean_test_acc": 88.10625,
+  "best_val_f1": {
+    "iscxvpn": 77.4567093329424,
+    "dohbrw": 98.17428087965324
+  },
+  "history": [],
+  "wall_time_sec": 650.7933368682861,
+  "mode": "local",
+  "federated_config": {
+    "rounds": 30,
+    "local_epochs": 1,
+    "share_mode": "encoder",
+    "fedprox_mu": 0.0,
+    "align": false,
+    "align_weight": 0.5,
+    "align_temperature": 0.1,
+    "proto_clip": 1.0,
+    "dp_sigma": 0.0,
+    "dp_clip": 1.0,
+    "dp_delta": 1e-05
+  },
+  "seed": 42
+}

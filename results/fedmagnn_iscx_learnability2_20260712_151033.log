@@ -1,0 +1,8 @@
+[2026-07-12 15:10:33] INFO fedmagnn_iscx_learnability2: Mode: local | tag: iscx_learnability2 | device: cpu
+[2026-07-12 15:10:33] INFO fedmagnn_iscx_learnability2: Federated config: {"rounds": 15, "local_epochs": 1, "share_mode": "encoder", "fedprox_mu": 0.0, "align": false, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-12 15:10:33] INFO fedmagnn_iscx_learnability2:   silo iscxvpn: train_nodes=4000 val_nodes=4000 test_nodes=4000 malicious_ratio=0.721
+[2026-07-12 15:11:07] INFO fedmagnn_iscx_learnability2:   iscxvpn epoch 10/15 loss=8.6964 val_f1=63.28%
+[2026-07-12 15:11:23] INFO fedmagnn_iscx_learnability2:   iscxvpn epoch 15/15 loss=7.9830 val_f1=64.04%
+[2026-07-12 15:11:24] INFO fedmagnn_iscx_learnability2: iscxvpn: TEST acc=72.28 f1=63.96
+[2026-07-12 15:11:24] INFO fedmagnn_iscx_learnability2: LOCAL BASELINE | mean test f1=63.96% acc=72.28%
+[2026-07-12 15:11:24] INFO fedmagnn_iscx_learnability2: Results saved to results\fed_results_iscx_learnability2.json

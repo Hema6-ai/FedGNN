@@ -1,0 +1,9 @@
+[2026-07-13 10:49:24] INFO fedmagnn_iscx_fixcheck: Mode: local | tag: iscx_fixcheck | device: cpu
+[2026-07-13 10:49:24] INFO fedmagnn_iscx_fixcheck: Federated config: {"rounds": 30, "local_epochs": 1, "share_mode": "encoder", "fedprox_mu": 0.0, "align": false, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-13 10:49:26] INFO fedmagnn_iscx_fixcheck:   silo iscxvpn: train_nodes=8000 val_nodes=7653 test_nodes=8000 malicious_ratio=0.728
+[2026-07-13 10:52:03] INFO fedmagnn_iscx_fixcheck:   iscxvpn epoch 10/30 loss=10.7977 val_f1=72.24%
+[2026-07-13 10:54:26] INFO fedmagnn_iscx_fixcheck:   iscxvpn epoch 20/30 loss=9.7128 val_f1=74.47%
+[2026-07-13 10:56:40] INFO fedmagnn_iscx_fixcheck:   iscxvpn epoch 30/30 loss=9.1269 val_f1=75.66%
+[2026-07-13 10:56:41] INFO fedmagnn_iscx_fixcheck: iscxvpn: TEST acc=76.85 f1=76.81
+[2026-07-13 10:56:41] INFO fedmagnn_iscx_fixcheck: LOCAL BASELINE | mean test f1=76.81% acc=76.85%
+[2026-07-13 10:56:41] INFO fedmagnn_iscx_fixcheck: Results saved to results\fed_results_iscx_fixcheck.json

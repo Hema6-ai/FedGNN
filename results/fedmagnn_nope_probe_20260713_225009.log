@@ -1,0 +1,9 @@
+[2026-07-13 22:50:09] INFO fedmagnn_nope_probe: Mode: local | tag: nope_probe | device: cpu
+[2026-07-13 22:50:09] INFO fedmagnn_nope_probe: Federated config: {"rounds": 30, "local_epochs": 1, "share_mode": "encoder", "fedprox_mu": 0.0, "align": false, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-13 22:50:10] INFO fedmagnn_nope_probe:   silo iscxvpn: train_nodes=8000 val_nodes=7653 test_nodes=8000 malicious_ratio=0.728
+[2026-07-13 22:51:41] INFO fedmagnn_nope_probe:   iscxvpn epoch 10/30 loss=11.4946 val_f1=74.43%
+[2026-07-13 22:53:11] INFO fedmagnn_nope_probe:   iscxvpn epoch 20/30 loss=10.3272 val_f1=76.43%
+[2026-07-13 22:54:37] INFO fedmagnn_nope_probe:   iscxvpn epoch 30/30 loss=9.6277 val_f1=73.54%
+[2026-07-13 22:54:37] INFO fedmagnn_nope_probe: iscxvpn: TEST acc=78.61 f1=78.21
+[2026-07-13 22:54:37] INFO fedmagnn_nope_probe: LOCAL BASELINE | mean test f1=78.21% acc=78.61%
+[2026-07-13 22:54:37] INFO fedmagnn_nope_probe: Results saved to results\fed_results_nope_probe.json

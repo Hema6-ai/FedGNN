@@ -1,0 +1,5 @@
+experiment,zeroshot_f1,zeroshot_acc,zeroshot_precision,zeroshot_recall
+zs_align_s42,72.05,58.19,94.58,58.19
+zs_noalign_s42,62.96,47.37,93.85,47.37
+zs_align_s43,62.59,46.96,93.82,46.96
+zs_noalign_s43,62.62,47.02,93.96,47.02

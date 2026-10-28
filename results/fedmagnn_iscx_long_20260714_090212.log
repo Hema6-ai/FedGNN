@@ -1,0 +1,26 @@
+[2026-07-14 09:02:12] INFO fedmagnn_iscx_long: Mode: local | tag: iscx_long | device: cpu
+[2026-07-14 09:02:12] INFO fedmagnn_iscx_long: Federated config: {"rounds": 200, "local_epochs": 1, "share_mode": "encoder", "fedprox_mu": 0.0, "align": false, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-14 09:02:13] INFO fedmagnn_iscx_long:   silo iscxvpn: train_nodes=8000 val_nodes=7653 test_nodes=8000 malicious_ratio=0.728
+[2026-07-14 09:03:40] INFO fedmagnn_iscx_long:   iscxvpn epoch 10/200 loss=11.6848 val_f1=71.18%
+[2026-07-14 09:05:02] INFO fedmagnn_iscx_long:   iscxvpn epoch 20/200 loss=10.7639 val_f1=74.99%
+[2026-07-14 09:06:22] INFO fedmagnn_iscx_long:   iscxvpn epoch 30/200 loss=10.2963 val_f1=76.83%
+[2026-07-14 09:07:41] INFO fedmagnn_iscx_long:   iscxvpn epoch 40/200 loss=9.6930 val_f1=77.21%
+[2026-07-14 09:08:59] INFO fedmagnn_iscx_long:   iscxvpn epoch 50/200 loss=9.1532 val_f1=77.40%
+[2026-07-14 09:10:16] INFO fedmagnn_iscx_long:   iscxvpn epoch 60/200 loss=8.7073 val_f1=77.45%
+[2026-07-14 09:11:33] INFO fedmagnn_iscx_long:   iscxvpn epoch 70/200 loss=8.2667 val_f1=77.88%
+[2026-07-14 09:12:52] INFO fedmagnn_iscx_long:   iscxvpn epoch 80/200 loss=7.9671 val_f1=78.28%
+[2026-07-14 09:14:09] INFO fedmagnn_iscx_long:   iscxvpn epoch 90/200 loss=7.7730 val_f1=78.35%
+[2026-07-14 09:15:27] INFO fedmagnn_iscx_long:   iscxvpn epoch 100/200 loss=7.6582 val_f1=78.05%
+[2026-07-14 09:16:34] INFO fedmagnn_iscx_long:   iscxvpn epoch 110/200 loss=7.4632 val_f1=78.55%
+[2026-07-14 09:17:54] INFO fedmagnn_iscx_long:   iscxvpn epoch 120/200 loss=7.3334 val_f1=79.00%
+[2026-07-14 09:19:15] INFO fedmagnn_iscx_long:   iscxvpn epoch 130/200 loss=7.2613 val_f1=79.56%
+[2026-07-14 09:20:35] INFO fedmagnn_iscx_long:   iscxvpn epoch 140/200 loss=7.1849 val_f1=79.01%
+[2026-07-14 09:21:56] INFO fedmagnn_iscx_long:   iscxvpn epoch 150/200 loss=7.0791 val_f1=79.08%
+[2026-07-14 09:23:17] INFO fedmagnn_iscx_long:   iscxvpn epoch 160/200 loss=7.0055 val_f1=78.73%
+[2026-07-14 09:24:37] INFO fedmagnn_iscx_long:   iscxvpn epoch 170/200 loss=6.9283 val_f1=78.96%
+[2026-07-14 09:25:58] INFO fedmagnn_iscx_long:   iscxvpn epoch 180/200 loss=6.9124 val_f1=79.80%
+[2026-07-14 09:27:19] INFO fedmagnn_iscx_long:   iscxvpn epoch 190/200 loss=6.8080 val_f1=79.79%
+[2026-07-14 09:28:23] INFO fedmagnn_iscx_long:   iscxvpn epoch 200/200 loss=6.7806 val_f1=79.98%
+[2026-07-14 09:28:24] INFO fedmagnn_iscx_long: iscxvpn: TEST acc=80.74 f1=80.40
+[2026-07-14 09:28:24] INFO fedmagnn_iscx_long: LOCAL BASELINE | mean test f1=80.40% acc=80.74%
+[2026-07-14 09:28:24] INFO fedmagnn_iscx_long: Results saved to results\fed_results_iscx_long.json

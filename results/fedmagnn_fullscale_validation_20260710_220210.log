@@ -1,0 +1,11 @@
+[2026-07-10 22:02:10] INFO fedmagnn_fullscale_validation: Mode: fedprox | tag: fullscale_validation | device: cpu
+[2026-07-10 22:02:10] INFO fedmagnn_fullscale_validation: Federated config: {"rounds": 1, "local_epochs": 1, "share_mode": "encoder", "fedprox_mu": 0.01, "align": true, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-10 22:02:13] INFO fedmagnn_fullscale_validation:   silo ctu13: train_nodes=31584 val_nodes=5983 test_nodes=10763 malicious_ratio=0.024
+[2026-07-10 22:02:13] INFO fedmagnn_fullscale_validation:   silo iscxvpn: train_nodes=134597 val_nodes=19229 test_nodes=38459 malicious_ratio=0.846
+[2026-07-10 22:05:41] INFO fedmagnn_fullscale_validation: Round 001/1 | mean val_f1=76.31% acc=72.16% | ctu13=76.2 iscxvpn=76.4 | 207.1s
+[2026-07-10 22:05:43] INFO fedmagnn_fullscale_validation: 
+Best round: 1 (mean val F1 76.31%)
+[2026-07-10 22:05:43] INFO fedmagnn_fullscale_validation: TEST | mean f1=75.72% acc=71.58%
+[2026-07-10 22:05:43] INFO fedmagnn_fullscale_validation:   ctu13      acc=62.61 f1=75.09 prec=97.62 rec=62.61
+[2026-07-10 22:05:43] INFO fedmagnn_fullscale_validation:   iscxvpn    acc=80.56 f1=76.36 prec=73.23 rec=80.56
+[2026-07-10 22:05:43] INFO fedmagnn_fullscale_validation: Results saved to results\fed_results_fullscale_validation.json

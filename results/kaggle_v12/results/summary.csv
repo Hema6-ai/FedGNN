@@ -1,0 +1,7 @@
+experiment,naive_f1,naive_recall,calibrated_f1,calibrated_recall
+zsc_align_s42,60.29,44.5,94.31,92.86
+zsc_noalign_s42,64.0,48.53,94.54,93.3
+zsc_align_s43,62.6,46.97,94.44,93.11
+zsc_noalign_s43,61.65,45.96,94.45,93.12
+zsc_align_s44,61.96,46.3,94.38,92.99
+zsc_noalign_s44,58.81,42.94,94.5,93.22

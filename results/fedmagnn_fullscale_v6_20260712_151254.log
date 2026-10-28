@@ -1,0 +1,6 @@
+[2026-07-12 15:12:54] INFO fedmagnn_fullscale_v6: Mode: fedprox | tag: fullscale_v6 | device: cpu
+[2026-07-12 15:12:54] INFO fedmagnn_fullscale_v6: Federated config: {"rounds": 1, "local_epochs": 1, "share_mode": "encoder", "fedprox_mu": 0.01, "align": true, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-12 15:13:12] INFO fedmagnn_fullscale_v6:   silo ctu13: train_nodes=31584 val_nodes=5983 test_nodes=10763 malicious_ratio=0.024
+[2026-07-12 15:13:12] INFO fedmagnn_fullscale_v6:   silo cicids: train_nodes=10076 val_nodes=1809 test_nodes=3349 malicious_ratio=0.001
+[2026-07-12 15:13:12] INFO fedmagnn_fullscale_v6:   silo dohbrw: train_nodes=139999 val_nodes=20000 test_nodes=40001 malicious_ratio=0.926
+[2026-07-12 15:13:12] INFO fedmagnn_fullscale_v6:   silo iscxvpn: train_nodes=53572 val_nodes=7653 test_nodes=15307 malicious_ratio=0.733

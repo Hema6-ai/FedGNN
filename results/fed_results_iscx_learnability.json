@@ -1,0 +1,36 @@
+{
+  "test_metrics": {
+    "iscxvpn": {
+      "accuracy": 48.05,
+      "f1": 40.033965699458456,
+      "precision": 43.91931168300654,
+      "recall": 48.05,
+      "mse": 0.2737882609150033,
+      "rmse": 0.5232478006786109,
+      "mae": 0.5006502812728286,
+      "mape": 37.160551350676215
+    }
+  },
+  "mean_test_f1": 40.033965699458456,
+  "mean_test_acc": 48.05,
+  "best_val_f1": {
+    "iscxvpn": 40.639165854622924
+  },
+  "history": [],
+  "wall_time_sec": 50.28120803833008,
+  "mode": "local",
+  "federated_config": {
+    "rounds": 15,
+    "local_epochs": 1,
+    "share_mode": "encoder",
+    "fedprox_mu": 0.0,
+    "align": false,
+    "align_weight": 0.5,
+    "align_temperature": 0.1,
+    "proto_clip": 1.0,
+    "dp_sigma": 0.0,
+    "dp_clip": 1.0,
+    "dp_delta": 1e-05
+  },
+  "seed": 42
+}

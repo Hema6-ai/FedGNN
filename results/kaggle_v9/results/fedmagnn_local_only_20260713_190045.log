@@ -1,0 +1,52 @@
+[2026-07-13 19:00:45] INFO fedmagnn_local_only: Mode: local | tag: local_only | device: cuda
+[2026-07-13 19:00:45] INFO fedmagnn_local_only: Federated config: {"rounds": 50, "local_epochs": 2, "share_mode": "encoder", "fedprox_mu": 0.0, "align": false, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-13 19:00:55] INFO fedmagnn_local_only:   silo ctu13: train_nodes=31584 val_nodes=5983 test_nodes=10763 malicious_ratio=0.024
+[2026-07-13 19:00:55] INFO fedmagnn_local_only:   silo cicids: train_nodes=10076 val_nodes=1809 test_nodes=3349 malicious_ratio=0.001
+[2026-07-13 19:00:55] INFO fedmagnn_local_only:   silo dohbrw: train_nodes=60000 val_nodes=20000 test_nodes=40001 malicious_ratio=0.926
+[2026-07-13 19:00:55] INFO fedmagnn_local_only:   silo iscxvpn: train_nodes=53572 val_nodes=7653 test_nodes=15307 malicious_ratio=0.733
+[2026-07-13 19:01:23] INFO fedmagnn_local_only:   ctu13 epoch 10/100 loss=12.9954 val_f1=97.23%
+[2026-07-13 19:01:49] INFO fedmagnn_local_only:   ctu13 epoch 20/100 loss=12.2479 val_f1=98.54%
+[2026-07-13 19:02:16] INFO fedmagnn_local_only:   ctu13 epoch 30/100 loss=11.6683 val_f1=98.81%
+[2026-07-13 19:02:43] INFO fedmagnn_local_only:   ctu13 epoch 40/100 loss=11.3131 val_f1=98.66%
+[2026-07-13 19:03:10] INFO fedmagnn_local_only:   ctu13 epoch 50/100 loss=11.0301 val_f1=98.83%
+[2026-07-13 19:03:36] INFO fedmagnn_local_only:   ctu13 epoch 60/100 loss=10.9238 val_f1=99.21%
+[2026-07-13 19:04:03] INFO fedmagnn_local_only:   ctu13 epoch 70/100 loss=10.7499 val_f1=99.33%
+[2026-07-13 19:04:30] INFO fedmagnn_local_only:   ctu13 epoch 80/100 loss=10.6960 val_f1=98.98%
+[2026-07-13 19:04:57] INFO fedmagnn_local_only:   ctu13 epoch 90/100 loss=10.6449 val_f1=99.33%
+[2026-07-13 19:05:24] INFO fedmagnn_local_only:   ctu13 epoch 100/100 loss=10.5807 val_f1=99.37%
+[2026-07-13 19:05:24] INFO fedmagnn_local_only: ctu13: TEST acc=99.57 f1=99.58
+[2026-07-13 19:05:31] INFO fedmagnn_local_only:   cicids epoch 10/100 loss=12.7531 val_f1=99.72%
+[2026-07-13 19:05:38] INFO fedmagnn_local_only:   cicids epoch 20/100 loss=12.2629 val_f1=99.72%
+[2026-07-13 19:05:45] INFO fedmagnn_local_only:   cicids epoch 30/100 loss=11.8901 val_f1=99.66%
+[2026-07-13 19:05:52] INFO fedmagnn_local_only:   cicids epoch 40/100 loss=11.5620 val_f1=99.68%
+[2026-07-13 19:05:59] INFO fedmagnn_local_only:   cicids epoch 50/100 loss=11.4115 val_f1=99.62%
+[2026-07-13 19:06:07] INFO fedmagnn_local_only:   cicids epoch 60/100 loss=11.2600 val_f1=99.66%
+[2026-07-13 19:06:14] INFO fedmagnn_local_only:   cicids epoch 70/100 loss=11.1323 val_f1=99.68%
+[2026-07-13 19:06:21] INFO fedmagnn_local_only:   cicids epoch 80/100 loss=11.0648 val_f1=99.66%
+[2026-07-13 19:06:28] INFO fedmagnn_local_only:   cicids epoch 90/100 loss=10.9288 val_f1=99.68%
+[2026-07-13 19:06:35] INFO fedmagnn_local_only:   cicids epoch 100/100 loss=10.8782 val_f1=99.69%
+[2026-07-13 19:06:35] INFO fedmagnn_local_only: cicids: TEST acc=99.70 f1=99.75
+[2026-07-13 19:07:53] INFO fedmagnn_local_only:   dohbrw epoch 10/100 loss=10.3424 val_f1=92.66%
+[2026-07-13 19:09:11] INFO fedmagnn_local_only:   dohbrw epoch 20/100 loss=9.1519 val_f1=96.62%
+[2026-07-13 19:10:29] INFO fedmagnn_local_only:   dohbrw epoch 30/100 loss=8.5624 val_f1=97.76%
+[2026-07-13 19:11:48] INFO fedmagnn_local_only:   dohbrw epoch 40/100 loss=8.1264 val_f1=97.91%
+[2026-07-13 19:13:06] INFO fedmagnn_local_only:   dohbrw epoch 50/100 loss=7.8267 val_f1=97.92%
+[2026-07-13 19:14:24] INFO fedmagnn_local_only:   dohbrw epoch 60/100 loss=7.5421 val_f1=98.15%
+[2026-07-13 19:15:42] INFO fedmagnn_local_only:   dohbrw epoch 70/100 loss=7.3481 val_f1=98.41%
+[2026-07-13 19:17:00] INFO fedmagnn_local_only:   dohbrw epoch 80/100 loss=7.0966 val_f1=98.59%
+[2026-07-13 19:18:18] INFO fedmagnn_local_only:   dohbrw epoch 90/100 loss=6.9225 val_f1=98.89%
+[2026-07-13 19:19:36] INFO fedmagnn_local_only:   dohbrw epoch 100/100 loss=6.7908 val_f1=99.10%
+[2026-07-13 19:19:36] INFO fedmagnn_local_only: dohbrw: TEST acc=99.09 f1=99.07
+[2026-07-13 19:20:43] INFO fedmagnn_local_only:   iscxvpn epoch 10/100 loss=13.3382 val_f1=70.45%
+[2026-07-13 19:21:50] INFO fedmagnn_local_only:   iscxvpn epoch 20/100 loss=11.5674 val_f1=74.35%
+[2026-07-13 19:22:56] INFO fedmagnn_local_only:   iscxvpn epoch 30/100 loss=10.6187 val_f1=75.83%
+[2026-07-13 19:24:02] INFO fedmagnn_local_only:   iscxvpn epoch 40/100 loss=10.0063 val_f1=76.72%
+[2026-07-13 19:25:08] INFO fedmagnn_local_only:   iscxvpn epoch 50/100 loss=9.4020 val_f1=76.02%
+[2026-07-13 19:26:15] INFO fedmagnn_local_only:   iscxvpn epoch 60/100 loss=8.8775 val_f1=77.12%
+[2026-07-13 19:27:22] INFO fedmagnn_local_only:   iscxvpn epoch 70/100 loss=8.5856 val_f1=77.77%
+[2026-07-13 19:28:28] INFO fedmagnn_local_only:   iscxvpn epoch 80/100 loss=8.2658 val_f1=77.91%
+[2026-07-13 19:29:34] INFO fedmagnn_local_only:   iscxvpn epoch 90/100 loss=8.0626 val_f1=78.15%
+[2026-07-13 19:30:42] INFO fedmagnn_local_only:   iscxvpn epoch 100/100 loss=7.8549 val_f1=78.31%
+[2026-07-13 19:30:42] INFO fedmagnn_local_only: iscxvpn: TEST acc=79.43 f1=78.65
+[2026-07-13 19:30:42] INFO fedmagnn_local_only: LOCAL BASELINE | mean test f1=94.26% acc=94.45%
+[2026-07-13 19:30:42] INFO fedmagnn_local_only: Results saved to /kaggle/working/results/fed_results_local_only.json

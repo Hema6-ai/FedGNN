@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+
+# Local LaTeX build/backup clutter, not needed by reviewers
+paper/backups/
+paper/build/
+paper/FINAL_SUBMISSION/
+paper/overleaf_upload/
+
+# Duplicated code bundle + raw presampled data staged for Kaggle uploads
+kaggle/dataset_staging/
+
+# Each kaggle_v*/ result folder contains a full duplicate source tree and a
+# zip of it (uploaded to Kaggle as-is); keep only the JSON/log outputs.
+results/*/FedMAGNN/
+results/*/fedmagnn_results.zip

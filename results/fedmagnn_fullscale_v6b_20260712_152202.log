@@ -1,0 +1,15 @@
+[2026-07-12 15:22:02] INFO fedmagnn_fullscale_v6b: Mode: fedprox | tag: fullscale_v6b | device: cpu
+[2026-07-12 15:22:02] INFO fedmagnn_fullscale_v6b: Federated config: {"rounds": 1, "local_epochs": 1, "share_mode": "encoder", "fedprox_mu": 0.01, "align": true, "align_weight": 0.5, "align_temperature": 0.1, "proto_clip": 1.0, "dp_sigma": 0.0, "dp_clip": 1.0, "dp_delta": 1e-05}
+[2026-07-12 15:22:13] INFO fedmagnn_fullscale_v6b:   silo ctu13: train_nodes=31584 val_nodes=5983 test_nodes=10763 malicious_ratio=0.024
+[2026-07-12 15:22:13] INFO fedmagnn_fullscale_v6b:   silo cicids: train_nodes=10076 val_nodes=1809 test_nodes=3349 malicious_ratio=0.001
+[2026-07-12 15:22:13] INFO fedmagnn_fullscale_v6b:   silo dohbrw: train_nodes=60000 val_nodes=20000 test_nodes=40001 malicious_ratio=0.926
+[2026-07-12 15:22:13] INFO fedmagnn_fullscale_v6b:   silo iscxvpn: train_nodes=53572 val_nodes=7653 test_nodes=15307 malicious_ratio=0.733
+[2026-07-12 15:25:03] INFO fedmagnn_fullscale_v6b: Round 001/1 | mean val_f1=74.37% acc=69.67% | ctu13=75.8 cicids=89.1 dohbrw=70.5 iscxvpn=62.0 | 169.2s
+[2026-07-12 15:25:06] INFO fedmagnn_fullscale_v6b: 
+Best round: 1 (mean val F1 74.37%)
+[2026-07-12 15:25:06] INFO fedmagnn_fullscale_v6b: TEST | mean f1=74.71% acc=70.17%
+[2026-07-12 15:25:06] INFO fedmagnn_fullscale_v6b:   ctu13      acc=64.81 f1=76.75 prec=97.64 rec=64.81
+[2026-07-12 15:25:06] INFO fedmagnn_fullscale_v6b:   cicids     acc=80.92 f1=89.25 prec=99.72 rec=80.92
+[2026-07-12 15:25:06] INFO fedmagnn_fullscale_v6b:   dohbrw     acc=61.67 f1=70.82 prec=85.72 rec=61.67
+[2026-07-12 15:25:06] INFO fedmagnn_fullscale_v6b:   iscxvpn    acc=73.28 f1=62.02 prec=67.07 rec=73.28
+[2026-07-12 15:25:06] INFO fedmagnn_fullscale_v6b: Results saved to results\fed_results_fullscale_v6b.json

@@ -1,0 +1,9 @@
+[2026-07-13 10:57:40] INFO fedmagnn_iscx_clsweight: Mode: local | tag: iscx_clsweight | device: cpu
+[2026-07-13 10:57:40] INFO fedmagnn_iscx_clsweight: Federated config: {"align": false, "align_temperature": 0.1, "align_weight": 0.5, "dp_clip": 1.0, "dp_delta": 1e-05, "dp_sigma": 0.0, "fedprox_mu": 0.0, "local_epochs": 1, "proto_clip": 1.0, "rounds": 30, "share_mode": "encoder"}
+[2026-07-13 10:57:41] INFO fedmagnn_iscx_clsweight:   silo iscxvpn: train_nodes=8000 val_nodes=7653 test_nodes=8000 malicious_ratio=0.728
+[2026-07-13 11:00:04] INFO fedmagnn_iscx_clsweight:   iscxvpn epoch 10/30 loss=2.2833 val_f1=73.68%
+[2026-07-13 11:02:34] INFO fedmagnn_iscx_clsweight:   iscxvpn epoch 20/30 loss=2.0582 val_f1=74.48%
+[2026-07-13 11:04:55] INFO fedmagnn_iscx_clsweight:   iscxvpn epoch 30/30 loss=1.9279 val_f1=76.67%
+[2026-07-13 11:04:56] INFO fedmagnn_iscx_clsweight: iscxvpn: TEST acc=77.03 f1=76.88
+[2026-07-13 11:04:56] INFO fedmagnn_iscx_clsweight: LOCAL BASELINE | mean test f1=76.88% acc=77.03%
+[2026-07-13 11:04:56] INFO fedmagnn_iscx_clsweight: Results saved to results\fed_results_iscx_clsweight.json
