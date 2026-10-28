@@ -336,8 +336,6 @@ def fig_architecture():
 if __name__ == "__main__":
     fig_main_results()
     fig_privacy()
-    fig_iscxvpn_audit()
-    fig_convergence()
     fig_zeroshot()
     fig_architecture()
     print("figures written:", sorted(p.name for p in HERE.glob("fig_*.pdf")))

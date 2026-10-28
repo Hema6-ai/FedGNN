@@ -1,89 +1,118 @@
-# FedMAGNN — Results Package (Phase B complete, 2026-07-14)
+# Results summary
 
-All numbers are test-set weighted F1 (%) on leakage-free data, 200k-flow
-presampled splits, seeds 42/43/44 unless noted. Kaggle runs v9 (main),
-v10 (seeds), v11 (zero-shot); raw JSONs in `results/kaggle_v*/results/`.
+The numbers below are reproduced exactly as reported in the paper. All
+headline numbers are mean ± std over three random seeds (42, 43, 44),
+computed by [paper/run_stats.py](paper/run_stats.py) from the per-seed
+JSON files in `results/`.
 
-## 1. Main results (3 seeds, mean ± std)
+## Main comparison (paper Table III)
 
-| config | ctu13 | cicids | dohbrw | iscxvpn |
+Test F1 (%), mean ± std over 3 seeds. ★ = significantly exceeds the
+originally reported centralized MAGNN (p < 0.05, one-sample t-test;
+paper Table IV).
+
+| Configuration | CTU-13 | CICIDS2017 | DoHBrw-2020 | ISCXVPN2016 |
 |---|---|---|---|---|
-| FedProx + align | 98.51 ± 1.15 ★ | 99.75 ± 0.01 ★ | 98.35 ± 0.49 | 77.34 ± 1.15 |
-| FedAvg | 99.29 ± 0.19 ★ | 99.64 ± 0.02 ★ | 98.23 ± 0.61 | 77.04 ± 1.13 |
-| Local only (no fed) | 99.55 ± 0.06 ★ | 99.75 ± 0.03 ★ | 99.22 ± 0.14 ★ | 78.23 ± 0.34 |
-| **Original MAGNN paper** | 97.58 | 97.70 | 98.35 | 97.12 |
+| MAGNN (centralized, originally reported) | 97.58 | 97.70 | 98.35 | 97.12 |
+| Local only | 99.6 ± 0.1 ★ | 99.8 ± 0.0 ★ | 99.2 ± 0.1 ★ | 78.2 ± 0.3 |
+| FedProx + alignment | 98.5 ± 1.2 | 99.8 ± 0.0 ★ | 98.4 ± 0.5 | 77.3 ± 1.2 |
+| FedAvg | 99.3 ± 0.2 ★ | 99.6 ± 0.0 ★ | 98.2 ± 0.6 | 77.0 ± 1.1 |
 
-★ = mean beats the original paper. Best single federated run
-(`fedprox_align_long`, v9): ctu13 99.39, cicids 99.82, dohbrw 99.30.
+Source: `results/kaggle_v9/results/` (seed 42), `results/kaggle_v10/results/`
+(seeds 43, 44). ISCXVPN2016's gap is a property of the benchmark, not of
+federation (see Benchmark audit below); local-only matches it exactly.
 
-**Claims supported:**
-- Federated training matches isolated training (within noise) while never
-  sharing raw data — and beats the original centralized paper on ctu13 and
-  cicids, tying dohbrw.
-- Prototype alignment is accuracy-neutral (v8's single-seed "alignment wins"
-  did not survive multi-seed testing — report this honestly).
+Two-sample tests against local-only training show federation costs no
+statistically significant accuracy on 7 of 8 (configuration, silo)
+pairs; the one exception (FedAvg on CICIDS2017, p = 0.012) is a
+0.11-F1 difference on a silo whose standard deviation is already
+≤ 0.03.
 
-## 2. Differential privacy (v9, seed 42, fedprox+align)
+## Feature comparison (paper Table V)
 
-| σ | ε (δ=1e-5) | ctu13 | cicids | dohbrw | iscxvpn |
-|---|---|---|---|---|---|
-| 0.5 | 168.4 | 96.94 | 99.64 | 93.67 | 71.56 |
-| 1.0 | 58.9 | 96.92 | 99.62 | 93.59 | 70.29 |
+| Method | Personalized | DP | Zero-shot | Scale-validated | Precision | Recall | F1 |
+|---|---|---|---|---|---|---|---|
+| Full-model FedAvg (diagnostic) | no | no | no | yes | 90.3 | 83.8 | 86.1 |
+| MAGNN (centralized) | — | no | no | no | — | — | 97.88 |
+| **FedGNN** | yes | yes | yes | yes | **99.12** | **99.03** | **99.05** |
 
-DP costs ≤6 F1 on clean silos. (ε values are large; tighter budgets need
-lower clip norms / fewer rounds — future work.)
+FedGNN's P/R/F1 are the FedAvg row of Table III, averaged over the
+three structurally sound silos (CTU-13, CICIDS2017, DoHBrw-2020); the
+MAGNN F1 is the same average of its originally reported per-silo
+values. The full-model FedAvg row is a smaller diagnostic run (single
+seed, 6k-flow subsample, 20 rounds; see Personalization ablation
+below), not the main protocol.
 
-## 3. Zero-shot cross-silo transfer (v11, ctu13 attack-blind)
+## Personalization ablation
 
-ctu13 trained with ZERO malicious examples; test-set detection via
-prototype-NN against foreign silos' DP prototypes (both arms exchange
-prototypes; arms differ only in the alignment loss).
+Full-model FedAvg (encoder and task heads both aggregated, no
+personalization) was trained as a diagnostic run: one seed, a 6k-flow
+subsample per silo, 20 rounds. Mean test F1 was 86.1, roughly eight
+points below the personalized configurations above despite a far
+smaller scale and budget; CICIDS2017's per-round F1 oscillated between
+80.2 and 97.5 without stabilizing. Source: `results/fed_results_fullshare_diagnostic.json`.
 
-| arm | seed 42 | seed 43 |
+## Privacy-utility trade-off
+
+Update and prototype releases are jointly accounted in one Renyi-DP
+accountant over the full 50-round protocol (δ = 1e-5):
+
+| σ | ε | Cost vs. non-private |
 |---|---|---|
-| with alignment | 72.05 | 62.59 |
-| without alignment | 62.96 | 62.62 |
+| 0.5 | ≈298 | smaller |
+| 1.0 | ≈98 | at most 6 F1 points on structurally sound silos |
 
-**Status: mechanism validated, effect not yet robust** (one seed +9 F1, one
-seed flat). Before this becomes a paper claim: calibrated anomaly-score
-classifier (threshold from own-benign embeddings) + ≥3 seeds.
+Source: `results/kaggle_v9/results/fed_results_fed_dp_sigma05.json`,
+`fed_results_fed_dp_sigma10.json`.
 
-## 4. ISCXVPN benchmark audit (a contribution, not a failure)
+## Zero-shot threat transfer
 
-The original loader derived `dst_ip` AND `dst_port` from the label —
-centralized "100%" results were label leakage. Additionally, Scenario B
-files duplicate Scenario A traffic with contradictory labels (~30% noise).
-On cleaned data the model ladder is:
+CTU-13 retrained with every malicious flow removed from its training
+split; detection uses only foreign DP-noised class prototypes and the
+silo's own benign traffic (no labels, no fine-tuning, no attack
+examples).
 
-| model | test F1 |
+| Detector | F1 |
 |---|---|
-| this GNN (all variants) | ~78–80 |
-| 2-layer MLP | 85.8 |
-| Random Forest | 95.5 |
-| original paper (with leakage + duplicates) | 97.12 |
+| Nearest-prototype (naive, θ = 0), without alignment | 61.5 ± 2.6 |
+| Nearest-prototype (naive, θ = 0), with alignment | 61.6 ± 1.2 |
+| Benign-quantile calibrated, without alignment | 94.5 ± 0.05 |
+| Benign-quantile calibrated, with alignment | 94.4 ± 0.06 |
 
-No leakage-free model reaches the paper's number; RF with duplicates left
-in reaches only 96.6. Exhaustive GNN ablations (loss weights, residual,
-snapshots, PE, 2× budget, 5× LR, plain-CE) all land 77–80: k-NN graphs
-built from features give message passing nothing to add on this dataset.
+The two calibrated arms are statistically indistinguishable
+(two-sample t-test, t = -2.61, p = 0.065): the zero-shot capability
+does not measurably depend on the InfoNCE alignment objective. The
+calibrated-vs-naive gain is significant under a paired t-test
+(t = +50.21, p = 0.0004). Source: `results/kaggle_v12/results/`
+(`fed_results_zsc_align_s*.json`, `fed_results_zsc_noalign_s*.json`).
 
-## 5. Engineering contributions
+## Benchmark audit: ISCXVPN2016
 
-- Monte-Carlo RWSE: positional encoding at 100k+ nodes (dense version needs
-  N² memory — 72 GB at iscxvpn scale).
-- Memory-bounded contrastive losses (anchor subsampling, max 4096).
-- Vectorized RWR augmentation / Dirichlet sampling / label building
-  (each was O(N·E) or Python-loop — hours per epoch at real scale).
-- Temporal-truncation fix: snapshot fusion no longer drops supervision for
-  nodes beyond temporal coverage (was collapsing time-sorted flow graphs
-  to majority-class).
-- Flow-level graph mode (k-NN + same-host temporal chains) for silos where
-  host graphs degenerate.
+The corpus's published 97.12 F1 was produced under two contaminations:
+graph endpoints synthesized from the class label, and exact-duplicate
+capture windows across scenario files with contradictory labels. On
+the cleaned benchmark (Scenario A only, deduplicated, no synthetic
+endpoints), the model ladder is:
 
-## Next steps
+| Model | Test F1 |
+|---|---|
+| Random forest | 95.5 |
+| Two-layer MLP | 85.8 |
+| GNN (all variants tested, 10-intervention ablation) | 78-80 |
+| Original paper (with contamination) | 97.12 — unreachable on clean data |
 
-1. Refine zero-shot classifier (calibrated threshold) + 3 seeds — when GPU
-   quota resets.
-2. Optional: DP at lower ε (clip/rounds sweep).
-3. Writeup: intro/related work can start now; experiments section is
-   complete except zero-shot.
+Mixing scenario files without deduplication caps any model near 68%
+accuracy from label noise alone; restricting to Scenario A and
+deduplicating lifts a random forest from 68% to 96%. Source: `data/iscxvpn_loader.py`,
+`data/preprocessing.py`.
+
+## Reproducing these numbers
+
+```bash
+cd paper
+python run_stats.py      # recomputes every t-test/p-value above from results/
+python gen_figures.py    # regenerates fig_main_results.pdf, fig_privacy.pdf, fig_zeroshot.pdf
+```
+
+See [README.md](README.md) for the commands used to produce each
+underlying run.

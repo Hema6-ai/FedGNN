@@ -14,3 +14,10 @@ kaggle/dataset_staging/
 # zip of it (uploaded to Kaggle as-is); keep only the JSON/log outputs.
 results/*/FedMAGNN/
 results/*/fedmagnn_results.zip
+
+# Figures not included in the final manuscript, and local QA preview renders
+paper/fig_boxplot.pdf
+paper/fig_convergence.pdf
+paper/fig_iscxvpn_audit.pdf
+paper/gen_boxplot.py
+paper/*_preview.png

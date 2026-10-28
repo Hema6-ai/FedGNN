@@ -45,7 +45,7 @@ def main():
     (STAGE / "dataset-metadata.json").write_text(
         '{\n'
         '  "title": "FedMAGNN Code",\n'
-        '  "id": "jyothilakshmigummapu/fedmagnn-code",\n'
+        '  "id": "<kaggle-username>/fedmagnn-code",\n'
         '  "licenses": [{"name": "CC0-1.0"}]\n'
         '}\n'
     )
