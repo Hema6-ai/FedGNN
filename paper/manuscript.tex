@@ -14,7 +14,7 @@
 \usepackage{pifont}
 \usepackage{threeparttable}
 \usepackage{array}
-\usepackage{url}
+\usepackage[hidelinks]{hyperref}
 
 \newcommand{\eps}{\varepsilon}
 % Fixed-width table columns that ragged-right instead of fully
@@ -30,7 +30,7 @@
 Federated Graph Learning for Network Intrusion Detection}
 
 \author{P.~Hema, Rajendra~Prasath%
-\thanks{P. Hema: e-mail phema7696@gmail.com, ORCID 0009-0000-6870-8548 (\url{https://orcid.org/0009-0000-6870-8548}); Rajendra Prasath: e-mail rajendra.prasath@iiits.in}%
+\thanks{P. Hema: e-mail phema7696@gmail.com, ORCID 0009-0000-6870-8548 (\mbox{\url{https://orcid.org/0009-0000-6870-8548}}); Rajendra Prasath: e-mail rajendra.prasath@iiits.in}%
 }
 
 \maketitle
@@ -171,51 +171,7 @@ from its own benign data alone, without a single labeled attack
 example. We call this \emph{zero-shot threat transfer}, and
 Sec.~\ref{sec:zeroshot} shows it recovers a strong detector for a silo
 that never saw a malicious flow during training---the central
-experimental result of this paper. Our contributions:
-
-\begin{enumerate}
-\item \textbf{FedGNN}: a personalized federated architecture, detailed
-in Sec.~\ref{sec:method}, in which the graph encoder is aggregated by
-FedAvg or FedProx while classification heads and the temporal encoder
-remain private. Federation is \emph{nearly free}: two-sample tests
-show it statistically matches isolated per-silo training on 7 of 8
-(configuration, silo) pairs, with one statistically significant but
-practically negligible exception detailed in Sec.~\ref{sec:mainresults}, while
-one-sample tests against the published MAGNN values show it
-significantly exceeds the original centralized paper on CTU-13
-($99.3$ vs.\ $97.6$ F1, $p{=}0.003$) and CICIDS2017 ($99.6$ vs.\
-$97.7$, $p{<}0.001$), and statistically ties DoHBrw-2020.
-Sec.~\ref{sec:comparative-personalization} additionally shows, with an
-empirical ablation, that this result depends on personalization: a
-naive full-model federation of the same encoder loses roughly eight
-F1 points and fails to converge stably.
-\item \textbf{Differentially private training and exchange}: DP-FedAvg
-update privatization with R\'enyi composition, plus a privatized
-prototype release, as formalized in Sec.~\ref{sec:dp}; the entire
-semantic interface between silos is two DP-noised 128-dimensional
-vectors per silo per round. Formal privacy at $\eps{\approx}98$,
-accounting for both released channels, costs at most six F1 points on
-structurally sound silos.
-\item \textbf{Zero-shot threat transfer}: the attack-blind silo
-introduced above detects botnet traffic at $94.5 \pm 0.05$ F1, as
-shown in Sec.~\ref{sec:zeroshot}. This does not measurably depend on
-an explicit InfoNCE alignment objective (two-sample test, not
-significant at $n{=}3$, $p{=}0.065$; see Sec.~\ref{sec:zsattribution}):
-encoder sharing and the prototype channel explain the observed effect.
-\item \textbf{A benchmark audit}: Sec.~\ref{sec:audit} documents two
-independent contaminations of the common ISCXVPN2016 evaluation
-(endpoint features derived from the class label; systematic window
-duplication with contradictory labels) and shows, via a model ladder
-and a ten-intervention elimination study, that the published $97.1$ F1
-is unreachable on clean data by any model family we tested, including
-a random forest at $95.5$.
-\item \textbf{Scale engineering}: Sec.~\ref{sec:scale} identifies,
-repairs, and validates fixes for five defects that prevent MAGNN-class
-pipelines from running at $10^{5}$-node scale, including a
-supervision-truncation bug whose failure mode---silent collapse to
-majority-class prediction on time-sorted graphs---we believe is
-instructive beyond this specific pipeline.
-\end{enumerate}
+experimental result of this paper.
 
 Two methodological positions run through the paper. First, we report
 negative results: single-seed experiments showed effects that did not
@@ -1487,34 +1443,44 @@ we have not exploited.
 
 \section{Conclusion}
 \label{sec:conclusion}
-A federation of four genuinely heterogeneous organizations trained a
-graph-contrastive intrusion detector matching the strongest published
-results on these corpora, without sharing a single flow. FedGNN
-statistically matches isolated training on 7 of 8 (configuration,
-silo) pairs and significantly exceeds the original centralized MAGNN
-on CICIDS2017 and CTU-13 (Tables~\ref{tab:main}--\ref{tab:sig}), under
-stricter, leakage-free evaluation and, where enabled, accounted
-differential privacy at single-digit F1 cost. An ablation shows this
-is not free of design choices: naive full-model federation loses
-roughly eight F1 points and fails to converge stably. Using its
-prototype channel---two DP-noised vectors per silo per round---with
-benign-quantile calibration, an attack-blind silo detects threats at
-$94.5 \pm 0.05$ F1, a capability that does not measurably depend on an
-explicit alignment objective. The accompanying audit shows that
-ISCXVPN2016's published evaluation is contaminated by label leakage
-and duplication, and supplies a leakage-free model ladder for future
-work; the engineering analysis makes MAGNN-class pipelines run at
-$10^{5}$-node scale, with communication cost independent of graph
-size. Coupling the prototype channel to an autonomous response layer
-that consumes prototype shifts as early warning and acts on local
-graph evidence is a natural extension of this work.
+This paper presented FedGNN, a federated extension of a
+graph-contrastive intrusion detector that lets four genuinely
+heterogeneous organizations train a shared model without any of them
+sharing a single flow of raw traffic. Its contributions are as
+follows.
+
+\begin{itemize}
+\item Federating the detector required personalizing it: only the
+graph encoder is aggregated across organizations, while classification
+heads and the temporal encoder stay local, so joining the federation
+costs next to nothing in detection accuracy.
+\item Both channels an organization releases to the federation, its
+model updates and its class prototypes, are privatized and accounted
+together under one differential-privacy budget rather than treated as
+independent releases.
+\item The same privatized prototype channel, introduced to align
+encoders across silos, also gives an organization with no labeled
+attacks of its own a working detector, built entirely from prototypes
+contributed by its federation partners and its own benign traffic.
+\item An audit of a widely used intrusion-detection benchmark
+uncovers two independent sources of label leakage in it and
+establishes a clean evaluation ladder that future work on this corpus
+can be measured against.
+\item Several engineering defects that kept pipelines of this kind
+from running at realistic network scale are identified and repaired,
+after which communication cost no longer grows with graph size.
+\end{itemize}
+
+Coupling the prototype channel to an autonomous response layer that
+consumes prototype shifts as an early warning signal, and acts on
+local graph evidence, is a natural extension of this work.
 
 \section*{Code Availability}
 Training and evaluation code, data-preparation scripts, federated
 client/server/DP/prototype modules, run configurations, and the
 per-seed result files underlying every table and figure in this paper
 are available at
-\url{https://github.com/Hema6-ai/FedGNN}.
+\mbox{\url{https://github.com/Hema6-ai/FedGNN}}.
 
 \begin{thebibliography}{25}
 
